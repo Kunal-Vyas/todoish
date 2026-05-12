@@ -65,21 +65,19 @@ Why first: Every component built afterward uses these tokens. Doing this now pre
 
 ---
 
-#### Step 2: Data Contracts & Persistence Layer
+#### Step 2: Data Contracts & Persistence Layer ✅
 
 **Contract:** `task-api.contract.md`, `project-api.contract.md`
 
 Why second: Before creating tasks, the data shapes and the store must exist.
 
-- [ ] Define TypeScript types for `Task`, `Subtask`, `Project`, `Section` in `src/contracts/`.
-- [ ] Implement Zod schemas for runtime validation (mirrors the contract validation rules).
-- [ ] Build a simple `localStorage` store:
-  - `load(): { tasks, projects }` — reads from `localStorage`, returns empty defaults if nothing stored.
-  - `save({ tasks, projects })` — writes to `localStorage`.
-- [ ] Write unit tests for Zod validators (title required, invalid status rejected, etc.).
-- [ ] Write unit tests for the store (round-trip: save then load returns the same data).
+- [x] Define TypeScript types for `Task`, `Subtask`, `Project`, `Section` → `src/contracts/task.ts`, `src/contracts/project.ts`
+- [x] Implement Zod schemas for runtime validation → taskSchema (22 fields + 3 refinements), projectSchema, sectionSchema, subtaskSchema
+- [x] Build a simple `localStorage` store → `src/utils/store.ts` with `load()` and `save()`
+- [x] Write unit tests for Zod validators → 30 task tests + 11 project tests (41 total)
+- [x] Write unit tests for the store → 6 tests (empty, round-trip, overwrite, corrupted data)
 
-**Deliverable:** Typed data models, validated inputs, and a persistence layer. Still no UI for tasks, but the store is testable.
+**Deliverable:** ✅ Complete. Typed data models, validated inputs, persistence layer. 61 tests passing (7 files).
 
 ---
 
