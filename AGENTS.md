@@ -14,6 +14,53 @@ Instructions and coding standards for AI agents contributing to the Todoish code
 
 ---
 
+## Specs-Driven Development
+
+This is a **specs-first** project. Every feature, bug fix, and architectural change begins with a spec — never with code.
+
+### The `.specs/` Directory
+
+All specifications live under `.specs/` at the project root. This directory is the single source of truth for what the application should do and how it should behave.
+
+```
+.specs/
+├── features/          # Feature specifications
+│   ├── task-crud.spec.md
+│   ├── subtasks.spec.md
+│   ├── recurring-tasks.spec.md
+│   ├── kanban-board.spec.md
+│   └── ...
+├── contracts/         # API contracts & data schemas
+│   ├── task-api.contract.md
+│   └── sync-protocol.contract.md
+├── designs/           # UI/UX design specs
+│   ├── list-view.design.md
+│   └── theme.design.md
+└── migrations/        # Data migration specs
+    └── v1-to-v2.migration.md
+```
+
+### Spec-First Workflow
+
+1. **Read the spec.** Before touching any code, locate and read the relevant spec under `.specs/`. If no spec exists, create one first.
+2. **Clarify ambiguity.** If the spec is unclear, ask for clarification or update it. The spec changes before the code does.
+3. **Implement to the spec.** Write code that satisfies the spec exactly — no more, no less. Gold-plating beyond the spec creates untested, undocumented behavior.
+4. **Test against the spec.** Tests verify the behavior described in the spec. Every acceptance criterion in a feature spec maps to at least one test case.
+5. **Update the spec.** If implementation reveals missing edge cases or necessary changes, update the spec first, then the code.
+
+### Spec Naming & Format
+
+- Feature specs use `.spec.md` extension and are named after the feature (`task-crud.spec.md`).
+- API contracts use `.contract.md` and define request/response shapes, error codes, and validation rules.
+- Design specs use `.design.md` and describe UI behavior, component states, and interaction patterns (not visual pixel layouts).
+- Every spec includes an **Acceptance Criteria** section with a checklist of testable conditions.
+
+### Living Documents
+
+Specs are living documents. They evolve with the codebase. When a feature changes, the spec changes first. Stale specs are a bug — treat them with the same urgency as broken tests.
+
+---
+
 ## Code Style
 
 ### Naming
