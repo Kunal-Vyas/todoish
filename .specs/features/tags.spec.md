@@ -2,7 +2,7 @@
 
 Apply and manage free-form tags on tasks for cross-cutting organization.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟡 Stage 2 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

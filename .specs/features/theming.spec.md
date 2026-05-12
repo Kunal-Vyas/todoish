@@ -2,7 +2,9 @@
 
 Dark mode, light mode, and custom accent colors. Themes follow system preferences and support manual override.
 
-**Depends on:** _(none — UI infrastructure)_
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** _(none — UI infrastructure)_
+
+> **MVP scope:** System preference detection (AC-001), manual toggle (AC-002), persistence (AC-003), no flash (AC-005), CSS custom properties for all UI elements (AC-010). Custom accent colors (AC-006 to AC-009), high contrast (AC-014), reduced motion (AC-015), and print styles (AC-016) are Stage 4.
 
 ---
 

@@ -78,38 +78,38 @@ A lightweight, fast todo app for capturing tasks, organizing projects, and shipp
 
 ## Keyboard Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `q` | Quick-add task |
-| `/` | Focus search |
-| `Ctrl/Cmd + Enter` | Submit form |
-| `Ctrl/Cmd + Z` | Undo |
-| `Ctrl/Cmd + Shift + Z` | Redo |
-| `e` | Edit selected task |
-| `Delete` | Delete selected task(s) |
-| `Ctrl/Cmd + D` | Duplicate task |
-| `Space` | Toggle complete |
-| `p` | Set priority |
-| `s` | Set status |
-| `d` | Set due date |
-| `l` | Add label/tag |
-| `f` | Focus search bar |
-| `1`–`5` | Switch views (List, Kanban, Calendar, Today, Projects) |
-| `↑ ↓` | Navigate tasks |
-| `Esc` | Close modal / clear focus |
+| Shortcut               | Action                                                 |
+| ---------------------- | ------------------------------------------------------ |
+| `q`                    | Quick-add task                                         |
+| `/`                    | Focus search                                           |
+| `Ctrl/Cmd + Enter`     | Submit form                                            |
+| `Ctrl/Cmd + Z`         | Undo                                                   |
+| `Ctrl/Cmd + Shift + Z` | Redo                                                   |
+| `e`                    | Edit selected task                                     |
+| `Delete`               | Delete selected task(s)                                |
+| `Ctrl/Cmd + D`         | Duplicate task                                         |
+| `Space`                | Toggle complete                                        |
+| `p`                    | Set priority                                           |
+| `s`                    | Set status                                             |
+| `d`                    | Set due date                                           |
+| `l`                    | Add label/tag                                          |
+| `f`                    | Focus search bar                                       |
+| `1`–`5`                | Switch views (List, Kanban, Calendar, Today, Projects) |
+| `↑ ↓`                  | Navigate tasks                                         |
+| `Esc`                  | Close modal / clear focus                              |
 
 ---
 
 ## Tech Stack
 
-| Layer | Options |
-|-------|---------|
-| Frontend | React, Next.js, or Vue |
-| Backend | Node.js, Python, or Go |
-| Database | PostgreSQL, SQLite (local), or IndexedDB (offline) |
-| Real-time | WebSockets or CRDT |
-| Mobile | Responsive Web, React Native, or Flutter |
-| Auth | OAuth 2.0, Passkeys, Magic Links |
+| Layer     | Options                                            |
+| --------- | -------------------------------------------------- |
+| Frontend  | React, Next.js, or Vue                             |
+| Backend   | Node.js, Python, or Go                             |
+| Database  | PostgreSQL, SQLite (local), or IndexedDB (offline) |
+| Real-time | WebSockets or CRDT                                 |
+| Mobile    | Responsive Web, React Native, or Flutter           |
+| Auth      | OAuth 2.0, Passkeys, Magic Links                   |
 
 ---
 

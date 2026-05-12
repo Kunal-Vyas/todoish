@@ -59,17 +59,17 @@ The system is composed of six specialized agents. Each agent has a well-scoped d
 
 ### Contracts
 
-| Interface | Input | Output |
-|-----------|-------|--------|
-| `createTask(payload)` | `CreateTaskPayload` | `Task` |
-| `updateTask(id, payload)` | `TaskId`, `UpdateTaskPayload` | `Task` |
-| `deleteTask(id)` | `TaskId` | `void` |
-| `bulkUpdate(ids, payload)` | `TaskId[]`, `BulkUpdatePayload` | `Task[]` |
-| `addSubtask(taskId, payload)` | `TaskId`, `CreateSubtaskPayload` | `Subtask` |
-| `completeSubtask(taskId, subtaskId)` | `TaskId`, `SubtaskId` | `Subtask` |
-| `setTaskStatus(id, status)` | `TaskId`, `TaskStatus` | `Task` |
-| `generateNextRecurrence(id)` | `TaskId` | `Task` (next instance) |
-| `startTimer(id)` / `stopTimer(id)` | `TaskId` | `TimeLogEntry` |
+| Interface                            | Input                            | Output                 |
+| ------------------------------------ | -------------------------------- | ---------------------- |
+| `createTask(payload)`                | `CreateTaskPayload`              | `Task`                 |
+| `updateTask(id, payload)`            | `TaskId`, `UpdateTaskPayload`    | `Task`                 |
+| `deleteTask(id)`                     | `TaskId`                         | `void`                 |
+| `bulkUpdate(ids, payload)`           | `TaskId[]`, `BulkUpdatePayload`  | `Task[]`               |
+| `addSubtask(taskId, payload)`        | `TaskId`, `CreateSubtaskPayload` | `Subtask`              |
+| `completeSubtask(taskId, subtaskId)` | `TaskId`, `SubtaskId`            | `Subtask`              |
+| `setTaskStatus(id, status)`          | `TaskId`, `TaskStatus`           | `Task`                 |
+| `generateNextRecurrence(id)`         | `TaskId`                         | `Task` (next instance) |
+| `startTimer(id)` / `stopTimer(id)`   | `TaskId`                         | `TimeLogEntry`         |
 
 ### Data Model (Core)
 
@@ -77,23 +77,23 @@ The system is composed of six specialized agents. Each agent has a well-scoped d
 interface Task {
   id: string;
   title: string;
-  description?: string;          // Rich-text / Markdown
-  status: TaskStatus;            // "todo" | "in_progress" | "done"
-  priority: Priority;            // "P0" | "P1" | "P2" | "P3" | "P4"
+  description?: string; // Rich-text / Markdown
+  status: TaskStatus; // "todo" | "in_progress" | "done"
+  priority: Priority; // "P0" | "P1" | "P2" | "P3" | "P4"
   projectId?: string;
   sectionId?: string;
   tags: string[];
   assigneeId?: string;
   startDate?: Date;
   dueDate?: Date;
-  dueTime?: string;              // "HH:mm"
+  dueTime?: string; // "HH:mm"
   estimatedMinutes?: number;
   isRecurring: boolean;
-  recurrenceRule?: string;       // RRULE or cron expression
-  parentTaskId?: string;         // For subtasks
+  recurrenceRule?: string; // RRULE or cron expression
+  parentTaskId?: string; // For subtasks
   subtasks: Subtask[];
   isPinned: boolean;
-  sortOrder: number;             // Manual ordering
+  sortOrder: number; // Manual ordering
   createdAt: Date;
   updatedAt: Date;
   completedAt?: Date;
@@ -136,14 +136,14 @@ interface Subtask {
 
 ### Contracts
 
-| Interface | Input | Output |
-|-----------|-------|--------|
-| `renderView(viewType, context)` | `ViewType`, `ViewContext` | Rendered component tree |
-| `showTaskDetail(taskId)` | `TaskId` | opens detail panel/modal |
-| `showQuickAdd(defaults?)` | `QuickAddDefaults?` | renders inline quick-add |
-| `applyFilters(filters)` | `FilterSet` | filtered visible tasks |
-| `setSortOrder(sort)` | `SortSpec` | re-ordered visible tasks |
-| `toggleTheme()` | — | updated CSS variables |
+| Interface                       | Input                     | Output                   |
+| ------------------------------- | ------------------------- | ------------------------ |
+| `renderView(viewType, context)` | `ViewType`, `ViewContext` | Rendered component tree  |
+| `showTaskDetail(taskId)`        | `TaskId`                  | opens detail panel/modal |
+| `showQuickAdd(defaults?)`       | `QuickAddDefaults?`       | renders inline quick-add |
+| `applyFilters(filters)`         | `FilterSet`               | filtered visible tasks   |
+| `setSortOrder(sort)`            | `SortSpec`                | re-ordered visible tasks |
+| `toggleTheme()`                 | —                         | updated CSS variables    |
 
 ### Component Tree (partial)
 
@@ -191,16 +191,16 @@ interface Subtask {
 
 ### Contracts
 
-| Interface | Input | Output |
-|-----------|-------|--------|
-| `persistMutation(mutation)` | `Mutation` | `Promise<void>` (queued) |
-| `getLocalState()` | — | `LocalStateSnapshot` |
-| `syncNow()` | — | `SyncResult` |
-| `getSyncStatus()` | — | `SyncStatus` |
-| `exportData(format)` | `ExportFormat` | `Blob` (download trigger) |
-| `importData(file, format)` | `File`, `ImportFormat` | `ImportResult` |
-| `createBackup()` | — | `BackupMetadata` |
-| `restoreBackup(id)` | `BackupId` | `void` |
+| Interface                   | Input                  | Output                    |
+| --------------------------- | ---------------------- | ------------------------- |
+| `persistMutation(mutation)` | `Mutation`             | `Promise<void>` (queued)  |
+| `getLocalState()`           | —                      | `LocalStateSnapshot`      |
+| `syncNow()`                 | —                      | `SyncResult`              |
+| `getSyncStatus()`           | —                      | `SyncStatus`              |
+| `exportData(format)`        | `ExportFormat`         | `Blob` (download trigger) |
+| `importData(file, format)`  | `File`, `ImportFormat` | `ImportResult`            |
+| `createBackup()`            | —                      | `BackupMetadata`          |
+| `restoreBackup(id)`         | `BackupId`             | `void`                    |
 
 ### Sync Protocol
 
@@ -240,22 +240,22 @@ Client                          Server
 
 ### Contracts
 
-| Interface | Input | Output |
-|-----------|-------|--------|
-| `signUp(email, password)` | `Credentials` | `Session` |
-| `signIn(email, password)` | `Credentials` | `Session` |
-| `signInWithProvider(provider)` | `OAuthProvider` | redirect flow |
-| `signOut()` | — | `void` |
-| `getSession()` | — | `Session \| null` |
-| `refreshToken()` | — | `Session` |
-| `canEdit(taskId)` | `TaskId` | `boolean` |
-| `canView(projectId)` | `ProjectId` | `boolean` |
-| `getUserProfile(userId)` | `UserId` | `UserProfile` |
+| Interface                      | Input           | Output            |
+| ------------------------------ | --------------- | ----------------- |
+| `signUp(email, password)`      | `Credentials`   | `Session`         |
+| `signIn(email, password)`      | `Credentials`   | `Session`         |
+| `signInWithProvider(provider)` | `OAuthProvider` | redirect flow     |
+| `signOut()`                    | —               | `void`            |
+| `getSession()`                 | —               | `Session \| null` |
+| `refreshToken()`               | —               | `Session`         |
+| `canEdit(taskId)`              | `TaskId`        | `boolean`         |
+| `canView(projectId)`           | `ProjectId`     | `boolean`         |
+| `getUserProfile(userId)`       | `UserId`        | `UserProfile`     |
 
 ### Permission Matrix
 
 | Role   | View Tasks | Edit Tasks | Delete Tasks | Manage Members | Edit Project |
-|--------|------------|------------|--------------|----------------|--------------|
+| ------ | ---------- | ---------- | ------------ | -------------- | ------------ |
 | Owner  | ✅         | ✅         | ✅           | ✅             | ✅           |
 | Editor | ✅         | ✅         | ✅           | ❌             | ✅           |
 | Viewer | ✅         | ❌         | ❌           | ❌             | ❌           |
@@ -284,13 +284,13 @@ Client                          Server
 
 ### Contracts
 
-| Interface | Input | Output |
-|-----------|-------|--------|
+| Interface                 | Input                  | Output           |
+| ------------------------- | ---------------------- | ---------------- |
 | `search(query, filters?)` | `string`, `FilterSet?` | `SearchResult[]` |
-| `reindex(taskId)` | `TaskId` | `void` |
-| `reindexAll()` | — | `void` |
-| `getSuggestions(prefix)` | `string` | `Suggestion[]` |
-| `parseAdvancedQuery(raw)` | `string` | `ParsedQuery` |
+| `reindex(taskId)`         | `TaskId`               | `void`           |
+| `reindexAll()`            | —                      | `void`           |
+| `getSuggestions(prefix)`  | `string`               | `Suggestion[]`   |
+| `parseAdvancedQuery(raw)` | `string`               | `ParsedQuery`    |
 
 ### Query Syntax Reference
 
@@ -326,28 +326,28 @@ Client                          Server
 
 ### Contracts
 
-| Interface | Input | Output |
-|-----------|-------|--------|
-| `scheduleReminder(taskId, leadTime)` | `TaskId`, `Duration` | `ReminderId` |
-| `cancelReminder(reminderId)` | `ReminderId` | `void` |
-| `sendPush(subscription, payload)` | `PushSubscription`, `NotificationPayload` | `void` |
-| `sendEmail(to, template, context)` | `Email`, `TemplateId`, `Context` | `void` |
-| `getActivityFeed(userId, opts?)` | `UserId`, `PaginationOpts?` | `ActivityEvent[]` |
-| `updatePreferences(userId, prefs)` | `UserId`, `NotificationPreferences` | `NotificationPreferences` |
-| `toast(message, type)` | `string`, `ToastType` | renders in-app toast |
+| Interface                            | Input                                     | Output                    |
+| ------------------------------------ | ----------------------------------------- | ------------------------- |
+| `scheduleReminder(taskId, leadTime)` | `TaskId`, `Duration`                      | `ReminderId`              |
+| `cancelReminder(reminderId)`         | `ReminderId`                              | `void`                    |
+| `sendPush(subscription, payload)`    | `PushSubscription`, `NotificationPayload` | `void`                    |
+| `sendEmail(to, template, context)`   | `Email`, `TemplateId`, `Context`          | `void`                    |
+| `getActivityFeed(userId, opts?)`     | `UserId`, `PaginationOpts?`               | `ActivityEvent[]`         |
+| `updatePreferences(userId, prefs)`   | `UserId`, `NotificationPreferences`       | `NotificationPreferences` |
+| `toast(message, type)`               | `string`, `ToastType`                     | renders in-app toast      |
 
 ### Event Subscriptions
 
 This agent listens for internal events emitted by other agents:
 
-| Event | Publisher | Action |
-|-------|-----------|--------|
-| `task.due_soon` | Task Agent (via cron check) | Dispatch push/email reminder |
-| `task.assigned` | Task Agent | Add to activity feed, notify assignee |
-| `task.commented` | Task Agent | Notify task watchers |
-| `sync.conflict` | Sync Agent | Toast alert to user |
-| `sync.offline` / `sync.online` | Sync Agent | Toast connectivity status |
-| `auth.magic_link_requested` | Auth Agent | Send magic link email |
+| Event                          | Publisher                   | Action                                |
+| ------------------------------ | --------------------------- | ------------------------------------- |
+| `task.due_soon`                | Task Agent (via cron check) | Dispatch push/email reminder          |
+| `task.assigned`                | Task Agent                  | Add to activity feed, notify assignee |
+| `task.commented`               | Task Agent                  | Notify task watchers                  |
+| `sync.conflict`                | Sync Agent                  | Toast alert to user                   |
+| `sync.offline` / `sync.online` | Sync Agent                  | Toast connectivity status             |
+| `auth.magic_link_requested`    | Auth Agent                  | Send magic link email                 |
 
 ### Boundaries
 

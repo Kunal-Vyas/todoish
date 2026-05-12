@@ -2,7 +2,7 @@
 
 Visual workflow management with drag-and-drop tasks across status columns.
 
-**Depends on:** `features/task-crud.spec.md`, `features/projects.spec.md`
+**Stage:** 🟡 Stage 2 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`, `features/projects.spec.md`
 
 ---
 

@@ -2,7 +2,7 @@
 
 A catch-all list for uncategorized tasks that supports the GTD workflow of capturing first and organizing later.
 
-**Depends on:** `features/task-crud.spec.md`, `features/projects.spec.md`
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`, `features/projects.spec.md`
 
 ---
 

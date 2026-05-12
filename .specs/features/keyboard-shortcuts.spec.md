@@ -2,7 +2,9 @@
 
 Every primary action is accessible via keyboard. Shortcuts are discoverable, remappable, and consistent.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
+
+> **MVP scope:** Core shortcuts (AC-001 to AC-006), Undo/Redo (AC-017, AC-018), Escape (AC-004). Editing shortcuts (AC-007 to AC-014), view switching (AC-015, AC-016), and discoverability (AC-019 to AC-021) are Stage 2.
 
 ---
 

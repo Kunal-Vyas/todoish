@@ -2,7 +2,7 @@
 
 Create, read, update, delete, and archive projects. Projects are the primary grouping mechanism for tasks.
 
-**Depends on:** `contracts/project-api.contract.md`
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** `contracts/project-api.contract.md`
 
 ---
 

@@ -2,7 +2,9 @@
 
 Search across all task fields, filter by multiple criteria, and sort by any field. These three capabilities share a spec because they compose together.
 
-**Depends on:** `features/task-crud.spec.md`, `features/tags.spec.md`
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
+
+> **MVP scope:** Search (AC-001 to AC-008), Filter (AC-009 to AC-018), Sort (AC-019 to AC-027). Saved Filters (AC-028 to AC-032) are Stage 2.
 
 ---
 

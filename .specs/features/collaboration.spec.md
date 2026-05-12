@@ -2,7 +2,9 @@
 
 Shared projects, task assignment, comments, and activity tracking for team workflows.
 
-**Depends on:** `features/auth.spec.md`, `features/task-crud.spec.md`, `features/projects.spec.md`
+**Stage:** 🔵 Stage 4 &nbsp;|&nbsp; **Depends on:** `features/auth.spec.md`, `features/task-crud.spec.md`, `features/projects.spec.md`
+
+> **MVP note:** Collaboration is Stage 4. The MVP is single-user with no sharing, assignment, comments, or activity log.
 
 ---
 

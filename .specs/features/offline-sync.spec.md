@@ -2,7 +2,9 @@
 
 Full offline support with automatic sync when connectivity is restored.
 
-**Depends on:** `features/task-crud.spec.md`, `contracts/sync-protocol.contract.md`
+**Stage:** 🟠 Stage 3 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`, `contracts/sync-protocol.contract.md`
+
+> **MVP note:** The MVP uses synchronous localStorage for persistence. Offline queue, sync protocol, and IndexedDB are Stage 3. Import/export (AC-019 to AC-024) and backup/restore (AC-025 to AC-028) are Stage 4.
 
 ---
 

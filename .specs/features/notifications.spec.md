@@ -2,7 +2,9 @@
 
 Push notifications, email reminders, and in-app alerts for task deadlines, assignments, and activity.
 
-**Depends on:** `features/task-crud.spec.md`, `features/collaboration.spec.md`
+**Stage:** 🟠 Stage 3 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`, `features/collaboration.spec.md`
+
+> **MVP note:** In-app toasts (AC-014 to AC-017) can be included in MVP for basic feedback. Push notifications, email reminders, and notification preferences are Stage 3.
 
 ---
 

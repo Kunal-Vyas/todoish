@@ -2,7 +2,7 @@
 
 Break tasks into checklists of subtasks with individual completion tracking.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟡 Stage 2 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

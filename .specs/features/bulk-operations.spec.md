@@ -2,7 +2,7 @@
 
 Select and mutate multiple tasks in a single action.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟡 Stage 2 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

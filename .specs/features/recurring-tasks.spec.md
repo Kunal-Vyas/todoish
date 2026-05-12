@@ -2,7 +2,7 @@
 
 Tasks that automatically regenerate on a schedule. Complete one instance and the next appears.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟠 Stage 3 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

@@ -67,12 +67,12 @@ Response 200:
 
 ## Conflict Resolution
 
-| Conflict | Resolution Strategy |
-|----------|-------------------|
-| Concurrent edit (same field) | Last-write-wins by server timestamp |
-| Concurrent edit (different fields) | Merge both changes |
-| Delete vs. Edit | Delete wins; subsequent edit creates a new entity |
-| Archived entity edited | Edit rejected with `ENTITY_ARCHIVED` error |
+| Conflict                           | Resolution Strategy                               |
+| ---------------------------------- | ------------------------------------------------- |
+| Concurrent edit (same field)       | Last-write-wins by server timestamp               |
+| Concurrent edit (different fields) | Merge both changes                                |
+| Delete vs. Edit                    | Delete wins; subsequent edit creates a new entity |
+| Archived entity edited             | Edit rejected with `ENTITY_ARCHIVED` error        |
 
 ## Offline Queue
 
@@ -83,19 +83,19 @@ Response 200:
 
 ## Sync Status
 
-| Status | Description |
-|--------|-------------|
-| `idle` | Synced, no pending changes |
+| Status    | Description                               |
+| --------- | ----------------------------------------- |
+| `idle`    | Synced, no pending changes                |
 | `pending` | Local changes queued, waiting for network |
-| `syncing` | Actively pushing/pulling |
-| `error` | Last sync failed, will retry |
-| `offline` | No network connection detected |
+| `syncing` | Actively pushing/pulling                  |
+| `error`   | Last sync failed, will retry              |
+| `offline` | No network connection detected            |
 
 ## Error Codes
 
-| Code | HTTP | Description |
-|------|------|-------------|
-| `SYNC_STALE_SEQ` | 409 | Client seqNo too old; full re-sync required |
-| `SYNC_CONFLICT` | 409 | Mutation conflicts with server state |
-| `ENTITY_ARCHIVED` | 422 | Cannot mutate an archived entity |
-| `ENTITY_NOT_FOUND` | 404 | Referenced entity does not exist |
+| Code               | HTTP | Description                                 |
+| ------------------ | ---- | ------------------------------------------- |
+| `SYNC_STALE_SEQ`   | 409  | Client seqNo too old; full re-sync required |
+| `SYNC_CONFLICT`    | 409  | Mutation conflicts with server state        |
+| `ENTITY_ARCHIVED`  | 422  | Cannot mutate an archived entity            |
+| `ENTITY_NOT_FOUND` | 404  | Referenced entity does not exist            |

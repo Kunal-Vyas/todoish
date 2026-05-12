@@ -2,7 +2,7 @@
 
 Assign and change priority levels on tasks. Priorities are the primary signal for task importance.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

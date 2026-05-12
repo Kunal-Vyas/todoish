@@ -2,7 +2,7 @@
 
 Pin important tasks to the top of any view so they never get lost in the list.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟡 Stage 2 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

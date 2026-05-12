@@ -2,7 +2,7 @@
 
 Undo the last operation and redo an undone operation. Works across all mutating actions.
 
-**Depends on:** `features/task-crud.spec.md`, `features/bulk-operations.spec.md`
+**Stage:** 🟠 Stage 3 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`, `features/bulk-operations.spec.md`
 
 ---
 

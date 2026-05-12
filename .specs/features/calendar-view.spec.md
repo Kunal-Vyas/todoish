@@ -2,7 +2,7 @@
 
 View tasks on a monthly, weekly, or daily calendar. Drag tasks to reschedule.
 
-**Depends on:** `features/task-crud.spec.md`
+**Stage:** 🟡 Stage 2 &nbsp;|&nbsp; **Depends on:** `features/task-crud.spec.md`
 
 ---
 

@@ -2,7 +2,7 @@
 
 Create, read, update, and delete tasks. This is the foundational feature — nearly every other feature builds on it.
 
-**Depends on:** `contracts/task-api.contract.md`
+**Stage:** 🟢 MVP &nbsp;|&nbsp; **Depends on:** `contracts/task-api.contract.md`
 
 ---
 

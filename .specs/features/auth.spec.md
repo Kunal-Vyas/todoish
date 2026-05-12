@@ -2,7 +2,9 @@
 
 User sign-up, sign-in, session management, and role-based authorization.
 
-**Depends on:** _(none — foundational infrastructure)_
+**Stage:** 🟠 Stage 3 &nbsp;|&nbsp; **Depends on:** _(none — foundational infrastructure)_
+
+> **MVP note:** Authentication is deferred to Stage 3. The MVP operates as a single-user, local-only app with no sign-in required.
 
 ---
 
