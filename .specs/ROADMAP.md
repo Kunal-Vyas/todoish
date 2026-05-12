@@ -81,31 +81,31 @@ Why second: Before creating tasks, the data shapes and the store must exist.
 
 ---
 
-#### Step 3: Task CRUD
+#### Step 3: Task CRUD ✅
 
 **Spec:** `task-crud.spec.md` (all 33 ACs)
 
 This is the core. Every other feature operates on tasks. Build the full CRUD with a minimal but functional list UI.
 
-- [ ] Implement the Task Agent (`createTask`, `updateTask`, `deleteTask`, `getTask`, `listTasks`).
-- [ ] Wire to the localStorage store from Step 2.
-- [ ] Build a minimal **List View** component:
+- [x] Implement the Task Agent (`createTask`, `updateTask`, `deleteTask`, `getTask`, `listTasks`).
+- [x] Wire to the localStorage store from Step 2.
+- [x] Build a minimal **List View** component:
   - Task rows showing title, priority dot, due date, status badge.
   - Click to select. Double-click to inline-edit title.
   - Status dropdown per task (todo / in_progress / done).
-- [ ] Build the **Quick-Add** input:
+- [x] Build the **Quick-Add** input:
   - Text input at the top of the list. `Enter` to submit.
   - Creates a task with defaults (status: todo, priority: P4, no project).
-- [ ] Build the **Task Detail Panel** (slide-over):
+- [x] Build the **Task Detail Panel** (slide-over):
   - Edit title, description, start date, due date, due time.
   - Change priority.
   - Assign to project.
   - Delete button with confirmation.
-- [ ] Implement all status transition rules (done → in_progress is invalid, etc.).
-- [ ] Set `completedAt` on completion, clear on reopen.
-- [ ] Test: All 33 task-crud ACs pass.
+- [x] Implement all status transition rules (done → in_progress is invalid, etc.).
+- [x] Set `completedAt` on completion, clear on reopen.
+- [x] Test: All 33 task-crud ACs pass.
 
-**Deliverable:** A working task list. You can create, edit, complete, and delete tasks. Tasks persist across page reloads.
+**Deliverable:** ✅ Complete. Working task list. Create, edit, complete, delete tasks. 96 tests passing (7 files).
 
 ---
 
@@ -252,9 +252,9 @@ Step 0: Scaffolding        [x] Complete
     │
 Step 1: Theme System       [x] Complete
     │
-Step 2: Contracts & Store  [ ] task-api.contract, project-api.contract
+Step 2: Contracts & Store  [x] Complete
     │
-Step 3: Task CRUD          [ ] task-crud (33 ACs)
+Step 3: Task CRUD          [x] Complete
     │
 Step 4: Projects           [ ] projects (21 ACs)
     │
