@@ -43,25 +43,25 @@ Set up the repository before touching any feature code. Full design and executab
 
 10 tasks, each independently committable: init Vite, TS strict mode, ESLint flat config, Prettier, pre-commit hooks, Vitest + RTL, directory structure, Zod, CI pipeline, final verification.
 
-**Deliverable:** A green build with zero warnings. Every tool configured. Directory tree ready. One passing smoke test. Ready for Step 1.
+**Deliverable:** ✅ Complete. Green build, zero warnings. 14 tests passing (4 files).
 
 ---
 
-#### Step 1: Design Tokens & Theme System
+#### Step 1: Design Tokens & Theme System ✅
 
 **Spec:** `theming.spec.md` (AC-001, AC-002, AC-003, AC-005, AC-010)
 
 Why first: Every component built afterward uses these tokens. Doing this now prevents color-hardcoding that would need to be ripped out later.
 
-- [ ] Define all CSS custom properties from `designs/theme.design.md` on `:root`.
-- [ ] Add `[data-theme="dark"]` overrides.
-- [ ] Write the blocking `<script>` in `<head>` that reads `localStorage` and sets `data-theme` before first paint (prevents flash).
-- [ ] Build the theme toggle button (sun/moon icon). Clicking cycles light → dark → system.
-- [ ] Persist choice to `localStorage`. Listen to `matchMedia('prefers-color-scheme')` changes when set to "system".
-- [ ] Verify: Page loads in correct theme. Toggle works. No flash on reload. OS preference change is live-reflected.
-- [ ] Test: AC-001, AC-002, AC-003, AC-005.
+- [x] Define all CSS custom properties from `designs/theme.design.md` on `:root` → `src/styles/tokens.css`
+- [x] Add `[data-theme="dark"]` overrides → same file, 38 overrides
+- [x] Write the blocking `<script>` in `<head>` that reads `localStorage` and sets `data-theme` before first paint → `index.html`
+- [x] Build the theme toggle button (sun/moon icon). Clicking cycles light → dark → system → `src/components/theme-toggle/`
+- [x] Persist choice to `localStorage`. Listen to `matchMedia('prefers-color-scheme')` changes when set to "system" → `src/hooks/use-theme.ts`
+- [x] Verify: Page loads in correct theme. Toggle works. No flash on reload. OS preference change is live-reflected.
+- [x] Test: AC-001, AC-002, AC-003, AC-005 → 14 tests (7 useTheme + 4 ThemeToggle + 2 App + 1 task scaffold)
 
-**Deliverable:** A themed shell with working light/dark/system toggle. An empty page, but correctly colored.
+**Deliverable:** ✅ Complete. Themed shell with light/dark/system toggle. All colors sourced from CSS custom properties.
 
 ---
 
@@ -250,9 +250,9 @@ The features are built. This step wires loose ends and hardens the experience.
 ### MVP Build Order Summary
 
 ```
-Step 0: Scaffolding        [ ] No spec — infra
+Step 0: Scaffolding        [x] Complete
     │
-Step 1: Theme System       [ ] theming (AC-001,002,003,005,010)
+Step 1: Theme System       [x] Complete
     │
 Step 2: Contracts & Store  [ ] task-api.contract, project-api.contract
     │
